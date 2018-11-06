@@ -30,6 +30,20 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Build Loops #2",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "loops-1.2.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
