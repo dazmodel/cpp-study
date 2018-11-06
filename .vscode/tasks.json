@@ -8,7 +8,23 @@
       "type": "shell",
       "command": "g++",
       "args": [
-        "-g", "-v", "./tst/2d-array.cpp"
+        "-g",
+        "-v",
+        "./tst/2d-array.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Build Loops #1",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "loops-1.1.cpp"
       ],
       "group": {
         "kind": "build",
