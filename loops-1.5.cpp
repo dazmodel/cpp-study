@@ -5,47 +5,55 @@
 using namespace std;
 
 // Вычисляем значение Y на интервале,
-// где x > 2
-float calculateYwhenXmoreThan2 (float a, float x) {
-  return cos(a * x + 2);
-} 
+// где a < x
+float calculateYwhenAlessThanX (float a, float x) {
+  return pow(a, 2) - x;
+}
+
+// Вычисляем значение Y при a = x
+float calculateYwhenAEqualToX (float a, float x) {
+  return pow(a, 2);
+}
 
 // Вычисляем значение Y на интервале,
-// где x <= 2
-float calculateYwhenXlessOrEqualTo2 (float a, float x) {
-  return tan(abs(x - 2 * a));
-}
+// где a > x
+float calculateYwhenAmoreThanX (float a, float x) {
+  return pow(a, 2) + x;
+} 
 
 // Вычисляем Y
 float calculateY (float a, float x) {
-  // Если x <= 2, то вычисляем значение Y на интервале,
-  // где x <= 2
-  if (x <= 2) {
-    return calculateYwhenXlessOrEqualTo2(a, x);
+  // Если a < x, то 
+  if (a < x) {
+    return calculateYwhenAlessThanX(a, x);
   } 
-  // В противном случае x > 2, вычисляем значение Y на интервале,
-  // где x > 2
-  return calculateYwhenXmoreThan2(a, x);
-  
+
+  // Если a = x, то
+  if (a == x) {
+    return calculateYwhenAEqualToX(a, x);
+  }
+
+  // В противном случае a > x
+  return calculateYwhenAmoreThanX(a, x);
 }
 
 int main() {
   // Задаем края интервала для Х
-  float xmin = 0.5, xmax = 3.1; 
+  int xmin = 1, xmax = 8; 
 
-  // Задаем минимальное значение для a
-  float amin = 0.1;
+  // Задаем края интервала для a
+  int amin = 2, amax = 10;
 
   // Задаем шаг X
-  float hx = 0.2;
+  float hx = 0.5;
 
   // Задаем шаг a
-  float ha = 0.3;
+  int ha = 1;
 
   cout << "Vhodnie dannue:" << endl;
   cout << "        x in [" << xmin << ", " << xmax << "]" << endl;
   cout << "        Hx = " << hx << endl;
-  cout << "        a >= " << amin << endl;
+  cout << "        a in [" << amin << ", " << amax << "]" << endl;
   cout << "        Ha = " << ha << endl;
   cout << endl;
 
@@ -58,7 +66,7 @@ int main() {
   // Количество итераций цикла, в рассчетах не участвует, только для отображения
   int iterationsCount = 0;
 
-  while(currentX >= xmin && currentX <= xmax && currentA >=amin) {
+  while(currentX <= xmax && currentA <= amax) {
     cout << "        Pri x = " << currentX << ", a = " << currentA << ", Y = " << calculateY(currentA, currentX) << endl;
 
     // a и x меняются одновременно

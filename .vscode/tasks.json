@@ -72,6 +72,20 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Build Loops #5",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "loops-1.5.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
