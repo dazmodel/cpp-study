@@ -142,6 +142,20 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Build Loops #10",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "loops-1.10.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
