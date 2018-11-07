@@ -34,7 +34,7 @@ int main() {
   // -----------------------------------------------------
 
   // ---------- Вычисляем высоты для введенных наборов сторон треугольников
-  srand(static_cast<unsigned int>(time(NULL)));
+  
   // Массив для высчитанных высот
   double triangleHeights[numberOfSideSets];
 
@@ -67,6 +67,6 @@ int main() {
           ", c = " << userInput[maxTriangleSidesIndex][2] << endl;
 
   // -----------------------------------------------------------------------
-  system("PAUSE");
+  
   return 0;
 }
