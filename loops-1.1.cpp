@@ -21,7 +21,7 @@ int main() {
   double hx = 0.5;
 
   cout << "Vhodnie dannue:" << endl;
-  cout << "        x => [" << xmin << ", " << xmax << "]" << endl;
+  cout << "        x in [" << xmin << ", " << xmax << "]" << endl;
   cout << "        Hx = " << hx << endl;
   cout << endl;
 

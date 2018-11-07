@@ -31,24 +31,20 @@ int main() {
   // Задаем края интервала для Х
   double xmin = 0.5, xmax = 3.1; 
 
-  // Задаем края интервала для a
-  double amin = -0.1, amax = -1.4;
+  // Задаем минимальное значение для a
+  double amin = 0.1;
 
   // Задаем шаг X
-  double hx = 0.21;
+  double hx = 0.2;
 
   // Задаем шаг a
-  double ha = 0.1;
-
-  // Задаем значение b
-  double b = 1.5;
+  double ha = 0.3;
 
   cout << "Vhodnie dannue:" << endl;
   cout << "        x in [" << xmin << ", " << xmax << "]" << endl;
   cout << "        Hx = " << hx << endl;
-  cout << "        a in [" << amin << ", " << amax << "]" << endl;
+  cout << "        a >= " << amin << endl;
   cout << "        Ha = " << ha << endl;
-  cout << "        b = " << b << endl;
   cout << endl;
 
   cout << "Rezultat: " << endl;
