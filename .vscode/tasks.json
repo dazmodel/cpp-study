@@ -128,6 +128,20 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Build Loops #9",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "loops-1.9.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }

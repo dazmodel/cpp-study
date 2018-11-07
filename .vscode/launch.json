@@ -111,6 +111,18 @@
       "environment": [],
       "externalConsole":true,
       "MIMode": "lldb"
+    },
+    {
+      "name": "Launch loops #9",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/a.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole":true,
+      "MIMode": "lldb"
     }
   ]
 }
