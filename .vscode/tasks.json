@@ -212,6 +212,20 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Build Arrays #5",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "2d-arrays-2.5.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
