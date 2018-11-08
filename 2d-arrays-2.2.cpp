@@ -29,38 +29,37 @@ int main() {
 
   for (int i=0; i < rows; i++ ) {
     for (int j=0; j < columns; j++ ) {
-        std::cout << " " << Matr[i][j];
+      cout << " " << Matr[i][j];
     }
-    std::cout << std::endl; 
-  }
 
-  // Заполняем массивы позитивных и негативных елементов
-  // ноль игнорируется
-  vector<int> PN;
-  vector<int> PP;
+    cout << endl; 
+  }
+  cout << endl;
+  // Заполняем массивы парных и непарных елементов
+  vector<int> M1; // Непарные
+  vector<int> M2; // Парные
 
   for(int i = 0; i < rows; i++) {
         for(int j = 0; j < columns; j++) {
-            int current = P[i][j];
+            int current = Matr[i][j];
 
-            if(current > 0) {
-              PP.push_back(current);
-            }
-
-            if(current < 0) {
-              PN.push_back(current);
+            if(current % 2 == 0) { // Парное, делится на 2 без остатка
+              M2.push_back(current); 
+            } else { // В противном случае не парное
+              M1.push_back(current);
             }
         }
     }
     
   //Печатаем результат
-  cout << "Otricatelnie elementu PN: ";
-  printVector(PN);
+  cout << "Parnie, detatsa na 2 bez ostatka: ";
+  printVector(M2);
 
   cout << endl;
 
-  cout << "Polojitelnue elementu PP:";
-  printVector(PP);
+  cout << "Neparnie:";
+  printVector(M1);
 
+  cout << endl;
   return 0;
 }
