@@ -156,6 +156,20 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Build Arrays #1",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "2d-arrays-2.1.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
