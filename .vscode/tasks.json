@@ -254,6 +254,20 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Build Arrays #8",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "2d-arrays-2.8.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
