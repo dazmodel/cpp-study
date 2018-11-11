@@ -77,8 +77,7 @@ int main() {
 
   // Будем группировать по знаку зодиака
   vector<zodiakGroup> byZodiak;
-  vector<zodiakGroup>::iterator it;
-
+  
   for ( int i = 0; i < numberOfStudents; i++ ) {
     int indexOfZodiakGroup = zodiakGroupIndex(byZodiak, students[i].zodiak);
 
