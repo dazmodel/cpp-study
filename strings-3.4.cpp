@@ -32,7 +32,7 @@ int main() {
   cout << endl;
   cout << "Slova, v kotoryh net bykv 'в' i 'у': " << endl;
 
-  // Ищем слова в которых есть буквы 'в' и 'у'
+  // Ищем слова в которых нет букв 'в' и 'у'
   int nFound = 0;
   for (int i = 0; i < words.size(); i ++ ) {
     if ((words[i].find("в") == string::npos) && (words[i].find("у") == string::npos) ) {

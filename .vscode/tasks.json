@@ -422,6 +422,20 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Build Strings #10",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "strings-3.10.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
