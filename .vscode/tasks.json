@@ -464,6 +464,20 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Build STRUCT #3",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "struct-4.3.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
