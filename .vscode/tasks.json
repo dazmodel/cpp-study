@@ -534,6 +534,20 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Build STRUCT #8",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "struct-4.8.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
