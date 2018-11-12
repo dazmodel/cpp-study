@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-// Структура для хранения результатов соревнований
+// Структура для хранения результатов сессии студента
 struct result {
   string name;
   string sex;
@@ -33,28 +33,35 @@ int getGroupIndex(vector<sexGroup> &groups, string sex) {
 
 // Печать набора структур
 void printSet(result *results, int n) {
-  cout << "Spisok rezultatov: " << endl;
+  cout << "Spisok rezultatov sessii: " << endl;
   cout << endl;
   for ( int i = 0; i < n; i++ ) {
     cout << "     Imia: " << results[i].name << endl;
     cout << "     Pol: " << results[i].sex << endl;
-    cout << "     Rezultat: " << results[i].score << endl;
+    cout << "     Ball: " << results[i].score << endl;
     cout << endl;
   }
   cout << endl;
 }
 
-// Печать сгруппированных значений
+// Поиск и печать результата
 void printGroups(vector<sexGroup> &groups) {
-  cout << "5 ly46ih rezultatov sorevnovanii. Gruppirovka y4astnikov po poly: " << endl;
-  cout << endl;
+  int bestIndex = 0;
+  double bestGroupAvg = 0;
   for ( int i = 0; i < groups.size(); i++ ) {
-    cout << groups[i].sex << ": " << endl;
-    for ( int j = 0; j < 5; j++ ) {
-      cout << "     " << groups[i].results[j].name << " : " << groups[i].results[j].score << endl;
+    int groupSum = 0;
+    for ( int j = 0; j < groups[i].results.size(); j++ ) {
+      groupSum += groups[i].results[j].score;
     }
-    cout << endl;
+    double groupAvg = groupSum / groups[i].results.size();
+
+    if ( groupAvg > bestGroupAvg ) {
+      bestGroupAvg = groupAvg;
+      bestIndex = i;
+    }
   }
+
+  cout << "Lu4shaia uspevaiemost v gruppe y : " << groups[bestIndex].sex << endl;
 }
 
 int main() {
@@ -87,7 +94,7 @@ int main() {
   // Печатаем входные данные
   printSet(results, numberOfResults);
 
-  // Будем группировать по полу участника
+  // Будем группировать по полу студента
   vector<sexGroup> bySex;
   
   for ( int i = 0; i < numberOfResults; i++ ) {
@@ -108,6 +115,7 @@ int main() {
     }
   }
 
+  // Вычисляем и печатаем результат
   printGroups(bySex);
   
   return 0;
