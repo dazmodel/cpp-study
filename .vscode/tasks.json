@@ -492,6 +492,20 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Build STRUCT #5",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-v",
+        "struct-4.5.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
